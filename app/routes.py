@@ -17,25 +17,25 @@ def index():
             'id': 2,
             'title': 'Thor Odinson',
             'body': 'The God of Thunder and an Asgardian warrior. The one who beholds Mjølnir and Stormbreaker. Thor is extremely durable to physical injuries, He has even survived energy blasts from a Star.',
-            'author': 'BuffMovieBuff123'
+            'author': 'Keyur P.'
         },
         {
             'id': 3,
             'title': 'Steve Rogers aka Captain America',
             'body': 'Captain America is the alter ego of Steve Rogers, a young man enhanced by an experimental super-soldier serum which enhances his  physical performance. Captain America often uses his shield (made of Vibranium) as an offensive throwing weapon. ',
-            'author': 'code_is_life'
+            'author': 'Keyur P.'
         },
         {
             'id': 4,
             'title': "T'Challa",
             'body': "T'Challa is the King of Wakanda and the Black Panther. He gets his powers from a magicaal herb which grants him uperhumanly acute senses, enhanced strength, speed, agility, stamina, durability, healing, and reflexes. He also possessess a suit made of Vibraanium and has the most  advnaced tech.",
-            'author': 'CodingTemple4L'
+            'author': 'Keyur P.'
         },
         {
             'id': 5,
             'title': 'Bruce Banner',
             'body': 'Hulk is the alter ego of Bruce Banner. He was accidentaly exposed to gamma rays which transforms him into Hulk when subjected to emotional stress.',
-            'author': 'CodingTemple4L'
+            'author': 'Keyur P.'
         }
         
     ]
@@ -52,3 +52,6 @@ def signup():
 def login():
     title= 'Login In'
     return render_template('login.html', title=title)
+
+
+

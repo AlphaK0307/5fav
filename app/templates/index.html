@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <title>Favorite 5</title>
+        <title>Favorite 5 {{ title }}</title>
     </head>
     <body>
 
@@ -32,6 +32,19 @@
             {% else %}
             <h1>Hello Please sign up to use our blog</h1>
             {% endif %}
+            
+            {% for p in posts %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ p.title }}</h5>
+                        <p class="card-text">{{p.body}}</p>
+                        <div>
+                            <cite>&mdash; {{p.author}}</cite>
+                        </div>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
         
         

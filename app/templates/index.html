@@ -1,33 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="Description" content="Enter your description here"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <title>Favorite 5 {{ title }}</title>
-    </head>
-    <body>
+{% extends 'base.html' %}
 
-        <div class="row bg-dark justify-content-around">
-            <h1 class="text-center text-white">Marvel's Big 5</h1>
-        </div>
+{%block content%}
 
-        <nav class="nav bg-dark d-flex justify-content-around">
-            <a href="" class="link-light">Home</a>
 
-            <a href="" class="link-light">Search</a>
-            
-            <a href="" class="link-light">Sign Up</a>
-            
-            <a href="" class="link-light">Log In</a>
-        </nav>
-
-        <div class="container">
-            {% if current_user.username %}
+{% if current_user.username %}
             <h1>Hello {{ current_user.username }}</h1>
             {% else %}
             <h1>Hello Please sign up to use our blog</h1>
@@ -41,17 +17,9 @@
                         <div>
                             <cite>&mdash; {{p.author}}</cite>
                         </div>
-                        <a href="#" class="btn btn-primary">More Info</a>
+                        <a href="" class="btn btn-primary">More Info</a>
                     </div>
                 </div>
             {% endfor %}
-        </div>
-        
-        
 
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    </body>
-</html>
+{%endblock content%}
